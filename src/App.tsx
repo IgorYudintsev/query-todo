@@ -7,6 +7,7 @@ import {Todolists} from "./features/todolists/Todolists.tsx";
 function App() {
     const {data: todos, error, isLoading, refetch} = useGetTodolistsQuery()
     const [createTodolist, {isLoading: newTodolistIsLoading, data: newTodolist}] = useCreateTodolistMutation()
+    console.log(isLoading)
 
     const createTodolistHandler = () => {
         const createdDate = new Date().toISOString();
